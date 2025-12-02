@@ -1,6 +1,4 @@
-.body{
 
-}
 
 #logo {
     width: 100%;
@@ -11,8 +9,7 @@ h1 {
     font-size:large;
 }
 
-.factFrame{
-}
+
 
 #empty-star {
     height: 20px;
@@ -22,8 +19,6 @@ h1 {
     height: 25px;
 }
 
-.buttons{
-}
 
 #button-full-star {
     height: 30px;
