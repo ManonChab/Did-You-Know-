@@ -1,4 +1,6 @@
-
+body {
+    background-color: #FDFEF0;
+}
 
 #logo {
     width: 100%;
@@ -8,8 +10,6 @@
 h1 {
     font-size:large;
 }
-
-
 
 #empty-star {
     height: 20px;
