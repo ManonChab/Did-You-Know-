@@ -4,27 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <script rel="features" src="./features.js" type="javascript"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Poetsen+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+    </style>
+
     <title>Did You Know?</title>
 </head>
 <body>
     <img src="./img/inkpx-word-art.png" alt="logo" id="logo">
 
     <section class="factFrame">
-        <h1>DAILY FACT</h1>
-        <p id="factLocation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies posuere mauris, sit amet rutrum dui mollis quis. Fusce consectetur tristique magna, dignissim mollis erat tincidunt vitae. </p>
-        <img src="./img/star (1).png" alt="empty star" id="empty-star">
-        <img src="./img/star.png" alt="full-star" id="full-star">
-        <a href=" " id="source">SOURCE</a>
+        <h1 id="title">DAILY FACT</h1>
+        <p id="factLocation"> </p>
+        <div class="elements">
+            <img src="./img/star (1).png" alt="empty star" id="empty-star">
+            <img src="./img/star.png" alt="full-star" id="full-star">
+            <a href=" " target="_blank" id="source">SOURCE</a>
+        </div>
     </section>
 
     <section class="buttons">
-        <button id="dailyFactButton">DAILY FACT</button>
-        <button id="newFactButton">NEW FACT</button>
-        <button id="favoritesButton">
+        <button id="dailyFactButton" class="btn">DAILY FACT</button>
+        <button id="newFactButton" class="btn">NEW FACT</button>
+        <button id="favoritesButton" class="btn">
             <img src="./img/star.png" alt="star" id="button-full-star">
+            <a rel="link to favorites" src="./favorites.html"></a>
         </button>
     </section>
+
+<!-- .then() method ----
+    <script rel="features" src="./features/fetch.js" type="module"></script>
+-->
+
+<!-- await/async method-->
+    <script rel="fetch" src="./features/fetch2.js" type="module"></script>
+    <script rel="favorites" src="./features/favorite2.js" type="module"></script>
 
 </body>
 </html>
