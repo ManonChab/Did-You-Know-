@@ -1,14 +1,54 @@
 body {
     background-color: #FDFEF0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.factFrame {
+    width: 100%;
+    position: relative;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+
+}
+
+.elements {
+    display: flex;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    position: relative;
+    top: 250px;
+    flex-shrink: 0;
 }
 
 #logo {
     width: 100%;
     margin-top: 10px;
+
 }
 
 h1 {
     font-size:large;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    color: #2B8059;
+}
+
+#factLocation {
+    font-family: "Istok Web", sans-serif;
+    font-size:x-large;
+    font-weight: bold;
+    margin: 10px;
 }
 
 #empty-star {
@@ -19,7 +59,52 @@ h1 {
     height: 25px;
 }
 
+#source {
+    position: relative;
+    left: 220px;
+}
 
 #button-full-star {
-    height: 30px;
+    height: 50px;
+    width: 50px;
+}
+
+.btn{
+    border-radius: 30px;
+}
+
+.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.istok-web-regular {
+  font-family: "Istok Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#dailyFactButton {
+    background-color: #2B8059;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 20px;
+    color: #FBECD7;
+    height: 80px;
+    width: 80px;
+}
+
+#newFactButton {
+    background-color: #9D5196;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 20px;
+    color: #FBECD7;
+    height: 100px;
+    width: 100px;
+}
+
+#favoritesButton {
+    background-color: #328CC2;
+    height: 80px;
+    width: 80px;
 }
