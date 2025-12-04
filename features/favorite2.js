@@ -11,33 +11,40 @@ function createFavList() {
     const listFav = document.createElement("ul");
     listFav.classList.add("listFav");
     container.appendChild(listFav)
+
+    console.log("listFav created", listFav);
 }
+
+function needFavList () {
+    let listFav = document.querySelector(".listFav");
+    if (!listFav){
+        createFavList();
+    }
+}
+
+needFavList();
 
 const arrayFav = [];
 
-function addToFav(patata) {
-    const fact = document.querySelector(".factLocation");
-    console.log(patata);
+function addToFav(fact) {
+    const listFav = document.querySelector(".factLocation");
 
     const object = {
-        text: patata
-    };
+        text: factPlace.textContent}
 
-    arrayFav.push(patata)
-    console.log(object);
+    arrayFav.push(object)
 
     console.log("added:", object);
     console.log(arrayFav);
-
 }
 
 async function clickToFav () {
     const favButton = document.getElementById("empty-star")
-    let currentFact = await factFetch()
-    favButton.addEventListener("click", addToFav(currentFact))
+    let fact = await factFetch();
+    const factText = fact.text || fact;
+    favButton.addEventListener("click", () => addToFav(factText))
 }
 
-createFavList();
 clickToFav();
 
 export {arrayFav}
