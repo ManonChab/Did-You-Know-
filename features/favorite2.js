@@ -61,11 +61,14 @@ async function toggleFavList() {
         if (parent)
         parent.appendChild(listItem);
 
-        const currentContent = document.querySelector(".factFrame");
+        const currentContent = document.querySelector("#factLocation");
         const listFav = document.querySelector(".listFav");
+        const other = document.querySelector(".elements");
 
          if (arrayFav.length >= 1 && listItem) {
             listItem.style.display = "block";
+            currentContent.style.display = "none";
+            other.style.display = "none";
          }
 
          if (arrayFav.length ==0){
