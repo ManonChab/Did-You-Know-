@@ -28,19 +28,14 @@ const arrayFav = [];
 
 function addToFav(fact) {
 
-
     const object = {
         text: factPlace.textContent}
 
     arrayFav.push(object)
 
-    const listItem = document.createElement("li");
-    listItem.textContent = object.text;
-    listItem.classList.add("favFact")
-
     console.log("added:", object);
     console.log(arrayFav);
-    console.log(listItem);
+
 }
 
 async function clickToFav () {
@@ -53,22 +48,37 @@ async function clickToFav () {
 clickToFav();
 
 async function toggleFavList() {
-    const body = document.querySelector(".factFrame");
-    const favButton = document.getElementById("button-full-star");
 
-    favButton.addEventListener("click", () => {
+        const parent = document.querySelector(".listFav")
+        parent.innerHTML = "";
+
+        arrayFav.forEach(fact => {
+
+        const listItem = document.createElement("li");
+        listItem.textContent = fact.text;
+        listItem.classList.add("favFact")
+
+        if (parent)
+        parent.appendChild(listItem);
+
         const currentContent = document.querySelector(".factFrame");
         const listFav = document.querySelector(".listFav");
-        const listItem = document.querySelector(".favFact")
 
-         if (arrayFav.length >= 1) {
-            currentContent.style.display = "none";
+         if (arrayFav.length >= 1 && listItem) {
             listItem.style.display = "block";
          }
 
-    });
+         if (arrayFav.length ==0){
+            currentContent.style.display = "block";
+         }
+})};
+
+
+function btn () {
+    const favButton = document.getElementById("button-full-star");
+    favButton.addEventListener("click", toggleFavList)
 }
 
-toggleFavList();
+btn();
 
 export {arrayFav}
