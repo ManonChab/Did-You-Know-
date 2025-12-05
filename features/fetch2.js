@@ -18,7 +18,6 @@ async function factFetch() {
         }
 
         const data = await response.json();
-        console.log(data);
 
         fact = factPlace.textContent = data.text
 
@@ -58,7 +57,6 @@ async function dailyFetch() {
         }
 
         const data = await response.json();
-        console.log(data);
 
         fact = factPlace.textContent = data.text
 
